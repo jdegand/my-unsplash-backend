@@ -31,14 +31,14 @@ This application/site was created as a submission to a [DevChallenges](https://d
 ## Thoughts
 
 - Thought about using passport and react - I think passport pairs better with template languages.
-- Could have had roles based implementation whereby deleting a photo required a extra role level.
+- Could have used a roles based implementation where deleting a photo required a certain role.
 - Didn't make deleting a photo password-based since you have to be logged-in already. 
 - Commenting out the Image Model `unique: true` is not enough - you need to login to mongo atlas and disable it there as well
-- Could make a images route and that gets all images from all users - code commented out in Image controller
-- If refresh token expires in non-persist mode and you are logged in, adding image will not work but you won't see a message or feedback (console log only)
+- Could make a images route and that gets all users images - code commented out in Image controller
+- If refresh token expires in non-persist mode and you are logged in, adding an image will not work but you won't see a message or any feedback (console log only)
 - Could add users route for an admin
 - Having a view for the api seems unnecessary so I commented that out.  Could make a documentation index page on index route. 
-- I didn't add properties to the request object - I associate that pattern with session based authentication. Better to add them to the jwt instead.  I think you can use jwt and sessions together - but I didn't try that here.  
+- I didn't add properties to the request object - I associate that pattern with session-based authentication. Added them to the jwt instead.  I think you can use jwt and sessions together - but I didn't try that here.  
 
 ## How To Use
 
