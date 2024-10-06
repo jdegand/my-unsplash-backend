@@ -1,7 +1,7 @@
 <h1 align="center">My Unsplash Backend</h1>
 
 <div align="center">
-   Solution for a challenge from  <a href="https://legacy.devchallenges.io/challenges/rYyhwJAxMfES5jNQ9YsP" target="_blank">Devchallenges.io</a>.
+   Solution for a challenge from  <a href="https://web.archive.org/web/20231130035602/https://legacy.devchallenges.io/challenges/rYyhwJAxMfES5jNQ9YsP" target="_blank">Devchallenges.io</a>.
 </div>
 
 ## Table of Contents
@@ -26,7 +26,7 @@
 
 ## Features
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://legacy.devchallenges.io/challenges/rYyhwJAxMfES5jNQ9YsP) was to build an application to complete the given user stories.
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://web.archive.org/web/20231130035602/https://legacy.devchallenges.io/challenges/rYyhwJAxMfES5jNQ9YsP) was to build an application to complete the given user stories. **Note**: The previous design document may be incomplete, as you need to find an archived version of the challenge as all `legacy` challenges have had their documentation removed from DevChallenges.
 
 ## Thoughts
 
@@ -46,7 +46,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/jdegand/my-unsplash-backend
+$ git clone https://github.com/jdegand/my-unsplash-backend.git
 
 # Install dependencies
 $ npm install
