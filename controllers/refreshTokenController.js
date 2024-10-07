@@ -15,7 +15,7 @@ const handleRefreshToken = async (req, res) => {
             const foundUser = await User.findById(decoded._id);
 
             if (err || foundUser.id !== decoded._id) return res.sendStatus(403);
-            
+
             const accessToken = jwt.sign(
                 {
                     "UserInfo": {
@@ -25,7 +25,7 @@ const handleRefreshToken = async (req, res) => {
                 process.env.ACCESS_TOKEN_SECRET,
                 { expiresIn: '10m' }
             );
-            res.json({ accessToken }) 
+            res.json({ accessToken })
         }
     );
 }

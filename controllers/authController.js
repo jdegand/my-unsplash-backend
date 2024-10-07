@@ -12,7 +12,7 @@ const handleLogin = async (req, res) => {
 
     const match = await bcrypt.compare(pwd, foundUser.password);
     if (match) {
-        
+
         // create JWTs
         const accessToken = jwt.sign(
             {
@@ -24,20 +24,20 @@ const handleLogin = async (req, res) => {
             { expiresIn: '10m' }
         );
         const refreshToken = jwt.sign(
-            { "_id": foundUser._id},
+            { "_id": foundUser._id },
             process.env.REFRESH_TOKEN_SECRET,
             { expiresIn: '1d' }
         );
         // Saving refreshToken with current user
         foundUser.refreshToken = refreshToken;
-        const result = await foundUser.save();
+        await foundUser.save();
 
         //req.userId = foundUser._id;  //doesn't work need either middleware or cookie
 
         // Creates Secure Cookie with refresh token
-        res.cookie('jwt', refreshToken, { httpOnly: true, secure:true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 }); 
+        res.cookie('jwt', refreshToken, { httpOnly: true, secure: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 });
 
-        res.json({ accessToken }); 
+        res.json({ accessToken });
     } else {
         res.sendStatus(401);
     }

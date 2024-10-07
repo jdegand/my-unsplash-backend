@@ -11,11 +11,11 @@ const imageSchema = new Schema({
         type: String,
         required: true,
         unique: true
-    }, 
-    user:{
+    },
+    user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
     }
-}, {timestamps: true});
+}, { timestamps: true });
 
 module.exports = mongoose.model('Image', imageSchema);
